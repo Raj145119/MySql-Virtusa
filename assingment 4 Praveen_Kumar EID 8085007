@@ -1,0 +1,82 @@
+
+Q1) WAQ to add a attribute rating to the salespeople table and numeric size 3.
+
+	SQL> alter table salespeople add rating number(3);
+
+	Table altered.
+
+Q2) See all the records of the salespeople table.
+	
+	SQL> select * from salespeople;
+
+Q3) Waq to update rating of all salespeople by 150.
+	
+	SQL> update salespeople set rating= 150;
+
+	22 rows updated.
+Q4) Waq to increase the rating by 110 for all salespeople deployed in London.
+	
+	SQL> update salespeople set rating= rating+110 where rtrim(city)='London';
+
+	1 row updated.
+	
+Q5) Add a attribute date of join for salespeople table.
+	SQL> alter table salespeople add dateofjoin date;
+
+	Table altered.
+
+Q6) Remove the attribute dateofjoin for salespeople table. 
+	
+	SQL> alter table salespeople drop column dateofjoin;
+
+	Table altered.
+	
+Q7) Print all customers who have are posted in city starting with L or M or both.
+	
+	SQL> select * from salespeople where city like 'L%' OR city like 'M%';
+
+Q8) Print all customer who are posted in the city where city size is exactly 7.
+	
+	SQL> select * from salespeople where city like '_______';
+
+Q9) Write a query where you will print all the salespeople details where cname of upper case and city of
+ lower case.
+	
+	SQL> select snum,upper(sname),lower(city),comm,rating from salespeople;
+ 
+Q10) Create a view called Mumbai where you will store all customer who are residing in london or mumbai.
+	
+	SQL> create view Mumbai
+  2  as select * from salespeople
+  3  where city='Mumbai' OR city='London';
+
+	View created.
+
+Q11) Execute the view mumbai and also check the structure of view Mumbai.
+	
+	SQL> desc Mumbai;
+
+Q12) Using joins print all those salespeople who have not brought business.
+	SQL> select snum,sname from 
+	salespeople s, orders o 
+	where s.snum != o.snum;
+Q13) Print all those customer no. and customer name and snum and sname and print all those customers
+ who do not stay in same city (Use joins).
+ 
+ SQL> select s.snum, sname, s.city, c.cnum, c.cname, c.city
+ from salespeople s, customer c
+ where s.snum = c.snum
+ and
+ rtrim(s.city) !=rtrim(c.city);
+ 
+Q14) Using Sub query print all those order details who have placed orders on
+ 14th april, 2018.
+ 
+ SQL> select * from orders 
+ where onum in 
+	(select onum from orders where 
+	odate='14-april-2018'); 
+Q15) Using joins print all those customer who placed orders. 
+	SQL> select cnum,cname from 
+	customer c, orders o 
+	where c.cnum=o.cnum;

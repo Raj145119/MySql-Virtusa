@@ -1,0 +1,441 @@
+
+sollution  of assignment1 Oracle 
+By:- Praveen Kumar
+
+Answer:--
+Q1.
+ create table salespeople
+ (
+	snum number(5) primary key,
+	sname char(15),
+	city varchar2(39),
+	comm number(11,2)
+);
+
+Q2.
+SQL> insert into salespeople values
+  2     (&snum,'&sname','&city',&comm);
+Enter value for snum: 1
+Enter value for sname: Raj
+Enter value for city: Sheohar
+Enter value for comm: 201.20
+old   2:    (&snum,'&sname','&city',&comm)
+new   2:    (1,'Raj','Sheohar',201.20)
+
+1 row created.
+
+SQL> /
+Enter value for snum: 2
+Enter value for sname: Aditya
+Enter value for city: Muz
+Enter value for comm: 399.34
+old   2:    (&snum,'&sname','&city',&comm)
+new   2:    (2,'Aditya','Muz',399.34)
+
+1 row created.
+
+SQL> /
+Enter value for snum: 3
+Enter value for sname: Sanjeet
+Enter value for city: patna
+Enter value for comm: 789.900
+old   2:    (&snum,'&sname','&city',&comm)
+new   2:    (3,'Sanjeet','patna',789.900)
+
+1 row created.
+
+SQL> /
+Enter value for snum: 4
+Enter value for sname: Aditya
+Enter value for city: Raipur
+Enter value for comm: 345.90
+old   2:    (&snum,'&sname','&city',&comm)
+new   2:    (4,'Aditya','Raipur',345.90)
+
+1 row created.
+
+SQL> /
+Enter value for snum: 5
+Enter value for sname: Praveen
+Enter value for city: Chennai
+Enter value for comm: 230.23
+old   2:    (&snum,'&sname','&city',&comm)
+new   2:    (5,'Praveen','Chennai',230.23)
+
+1 row created.
+
+SQL> /
+Enter value for snum: 6
+Enter value for sname: Raj
+Enter value for city: Raipur
+Enter value for comm: 212.45
+old   2:    (&snum,'&sname','&city',&comm)
+new   2:    (6,'Raj','Raipur',212.45)
+
+1 row created.
+
+SQL> /
+Enter value for snum: 7
+Enter value for sname: Uttam
+Enter value for city: Muzaffarpur
+Enter value for comm: 689.90
+old   2:    (&snum,'&sname','&city',&comm)
+new   2:    (7,'Uttam','Muzaffarpur',689.90)
+
+1 row created.
+
+SQL> /
+Enter value for snum: 8
+Enter value for sname: Sunil
+Enter value for city: Delhi
+Enter value for comm: 789.90
+old   2:    (&snum,'&sname','&city',&comm)
+new   2:    (8,'Sunil','Delhi',789.90)
+
+1 row created.
+
+SQL> /
+Enter value for snum: 9
+Enter value for sname: Raju
+Enter value for city: Gaya
+Enter value for comm: 123.90
+old   2:    (&snum,'&sname','&city',&comm)
+new   2:    (9,'Raju','Gaya',123.90)
+
+1 row created.
+
+SQL> /
+Enter value for snum: 10
+Enter value for sname: Amit Kumar
+Enter value for city: Gaya
+Enter value for comm: 234.9
+old   2:    (&snum,'&sname','&city',&comm)
+new   2:    (10,'Amit Kumar','Gaya',234.9)
+
+1 row created.
+   
+
+SQL> /
+Enter value for snum: 11
+Enter value for sname: Golu
+Enter value for city: Sheohar
+Enter value for comm: 20.90
+old   2:    (&snum,'&sname','&city',&comm)
+new   2:    (11,'Golu','Sheohar',20.90)
+
+1 row created.
+
+SQL> /
+Enter value for snum: 12
+Enter value for sname: Raju
+Enter value for city: Muzaffarpur
+Enter value for comm: 120.8
+old   2:    (&snum,'&sname','&city',&comm)
+new   2:    (12,'Raju','Muzaffarpur',120.8)
+
+1 row created.
+
+SQL> /
+Enter value for snum: 13
+Enter value for sname: Praveen
+Enter value for city: Raipur
+Enter value for comm: 345.6
+old   2:    (&snum,'&sname','&city',&comm)
+new   2:    (13,'Praveen','Raipur',345.6)
+
+1 row created.
+
+SQL> /
+Enter value for snum: 14
+Enter value for sname: Sanjeet
+Enter value for city: Muzaffarpur
+Enter value for comm: 120.90
+old   2:    (&snum,'&sname','&city',&comm)
+new   2:    (14,'Sanjeet','Muzaffarpur',120.90)
+
+1 row created.
+
+SQL> /
+Enter value for snum: 15
+Enter value for sname: Arbing
+Enter value for city: sitamarhi
+Enter value for comm: 120
+old   2:    (&snum,'&sname','&city',&comm)
+new   2:    (15,'Arbing','sitamarhi',120)
+
+1 row created.
+
+SQL> /
+Enter value for snum: 16
+Enter value for sname: sasiranjan
+Enter value for city: Sheohar
+Enter value for comm: 100.10
+old   2:    (&snum,'&sname','&city',&comm)
+new   2:    (16,'sasiranjan','Sheohar',100.10)
+
+1 row created.
+
+SQL> /
+Enter value for snum: 17
+Enter value for sname: Ramu
+Enter value for city: Gaya
+Enter value for comm: 234.90
+old   2:    (&snum,'&sname','&city',&comm)
+new   2:    (17,'Ramu','Gaya',234.90)
+
+1 row created.
+
+SQL> /
+Enter value for snum: 18
+Enter value for sname: raj
+Enter value for city: piprahi
+Enter value for comm: 122.90
+old   2:    (&snum,'&sname','&city',&comm)
+new   2:    (18,'raj','piprahi',122.90)
+
+1 row created.
+
+SQL> /
+Enter value for snum: 19
+Enter value for sname: Saroj
+Enter value for city: Delhi
+Enter value for comm: 1309.90
+old   2:    (&snum,'&sname','&city',&comm)
+new   2:    (19,'Saroj','Delhi',1309.90)
+
+1 row created.
+
+SQL> /
+Enter value for snum: 20
+Enter value for sname: Pavan
+Enter value for city: Bengalure
+Enter value for comm: 230.4
+old   2:    (&snum,'&sname','&city',&comm)
+new   2:    (20,'Pavan','Bengalure',230.4)
+
+1 row created.
+
+
+Q3.	
+SQL> commit;
+
+Commit complete.
+
+Q4. 
+
+SQL> select * from salespeople;
+
+      SNUM SNAME           CITY                                          COMM
+---------- --------------- --------------------------------------- ----------
+         1 Raj             Sheohar                                      201.2
+         2 Aditya          Muz                                         399.34
+         3 Sanjeet         patna                                        789.9
+         4 Aditya          Raipur                                       345.9
+         5 Praveen         Chennai                                     230.23
+         6 Raj             Raipur                                      212.45
+         7 Uttam           Muzaffarpur                                  689.9
+         8 Sunil           Delhi                                        789.9
+         9 Raju            Gaya                                         123.9
+        10 Amit Kumar      Gaya                                         234.9
+        11 Golu            Sheohar                                       20.9
+
+      SNUM SNAME           CITY                                          COMM
+---------- --------------- --------------------------------------- ----------
+        12 Raju            Muzaffarpur                                  120.8
+        13 Praveen         Raipur                                       345.6
+        14 Sanjeet         Muzaffarpur                                  120.9
+        15 Arbing          sitamarhi                                      120
+        16 sasiranjan      Sheohar                                      100.1
+        17 Ramu            Gaya                                         234.9
+        18 raj             piprahi                                      122.9
+        19 Saroj           Delhi                                       1309.9
+        20 Pavan           Bengalure                                    230.4
+
+20 rows selected.
+
+Q5. 
+	select sname from salespeople 
+		where city='London' OR city='Sheohar';
+		
+Q6. 
+	cl scr;
+
+Q7.  
+	SQL> select sysdate from dual;
+
+SYSDATE
+---------
+05-DEC-20
+
+Q8.
+	
+SQL> desc salespeople;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SNUM                                      NOT NULL NUMBER(5)
+ SNAME                                              CHAR(15)
+ CITY                                               VARCHAR2(39)
+ COMM                                               NUMBER(11,2)
+
+9Q.
+SQL> SELECT COUNT(SNUM) FROM salespeople; 
+	or
+		SELECT COUNT(*) FROM salespeople;
+
+COUNT(SNUM)
+-----------
+         20
+		 
+10Q.
+
+SQL> insert into salespeople 
+	values (21,'aditya','London',234.90);
+
+1 row created.
+
+11Q.
+SQL> select snum from salespeople 
+		where comm is null;
+
+no rows selected
+
+12Q.
+SQL> select count(sname), sum(comm) 
+		from salespeople 
+			where comm is not null;
+
+COUNT(SNAME)  SUM(COMM)
+------------ ----------
+          21    6978.92
+
+13Q.
+
+SQL> select snum,upper(sname) sname,lower(city) city from  salespeople;
+
+      SNUM SNAME           CITY
+---------- --------------- ---------------------------------------
+         1 RAJ             sheohar
+         2 ADITYA          muz
+         3 SANJEET         patna
+         4 ADITYA          raipur
+         5 PRAVEEN         chennai
+         6 RAJ             raipur
+         7 UTTAM           muzaffarpur
+         8 SUNIL           delhi
+         9 RAJU            gaya
+        10 AMIT KUMAR      gaya
+        11 GOLU            sheohar
+
+      SNUM SNAME           CITY
+---------- --------------- ---------------------------------------
+        12 RAJU            muzaffarpur
+        13 PRAVEEN         raipur
+        14 SANJEET         muzaffarpur
+        15 ARBING          sitamarhi
+        16 SASIRANJAN      sheohar
+        17 RAMU            gaya
+        18 RAJ             piprahi
+        19 SAROJ           delhi
+        20 PAVAN           bengalure
+        21 ADITYA          london
+
+21 rows selected.
+
+14Q.
+	
+SQL> delete from salespeople
+  2  where sname='alaska';
+
+0 rows deleted.
+
+15Q.
+roleback;
+
+16Q.
+SQL> select sname,city from salespeople 
+		where city='London' OR city='Sheohar'
+			OR city='Paris' OR city='Mumbai';
+
+SNAME           CITY
+--------------- ---------------------------------------
+Raj             Sheohar
+Golu            Sheohar
+sasiranjan      Sheohar
+aditya          London
+
+17Q.
+SQL> select substr('i am bill gates of india',11,5) from dual;
+
+SUBST
+-----
+gates
+
+18Q. 
+SQL> select sname,city from salespeople;
+
+SNAME           CITY
+--------------- ---------------------------------------
+Raj             Sheohar
+Aditya          Muz
+Sanjeet         patna
+Aditya          Raipur
+Praveen         Chennai
+Raj             Raipur
+Uttam           Muzaffarpur
+Sunil           Delhi
+Raju            Gaya
+Amit Kumar      Gaya
+Golu            Sheohar
+....
+
+19Q.
+
+SQL> delete from salespeople;
+
+21 rows deleted.
+
+SQL> rollback;
+
+Rollback complete.
+
+20Q.
+SQL> select snum,initcap(sname),lower(city)
+		from salespeople;
+
+      SNUM INITCAP(SNAME)  LOWER(CITY)
+---------- --------------- ---------------------------------------
+         1 Raj             sheohar
+         2 Aditya          muz
+         3 Sanjeet         patna
+         4 Aditya          raipur
+         5 Praveen         chennai
+         6 Raj             raipur
+         7 Uttam           muzaffarpur
+         8 Sunil           delhi
+         9 Raju            gaya
+        10 Amit Kumar      gaya
+        11 Golu            sheohar
+
+      SNUM INITCAP(SNAME)  LOWER(CITY)
+---------- --------------- ---------------------------------------
+        12 Raju            muzaffarpur
+        13 Praveen         raipur
+        14 Sanjeet         muzaffarpur
+        15 Arbing          sitamarhi
+        16 Sasiranjan      sheohar
+        17 Ramu            gaya
+        18 Raj             piprahi
+        19 Saroj           delhi
+        20 Pavan           bengalure
+        21 Aditya          london
+
+21 rows selected.
+
+22Q.
+
+SQL> select snum,sname,city 
+		from salespeople;
+
+23Q.
+ SQL> select * from 
+			salespeople where city !='USA';

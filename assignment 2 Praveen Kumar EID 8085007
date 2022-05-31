@@ -1,0 +1,98 @@
+								Oracle 11g SQL Assignment No :- 2 
+	By:- Praveen Kumar
+
+Answer:-
+
+Q1) write a query where you will print all those salespeople whose name starts with a to g
+ (use between clause only) 
+
+SQL> select sname from salespeople
+  2  where sname like 'A%'
+  3  OR sname like 'B%'
+  4  OR sname like 'C%'
+  5  OR sname like 'D%'
+  6  OR sname like 'E%'
+  7  OR sname like 'F%'
+  8  OR sname like 'G%';
+
+Q2) Add tupples to the database.
+
+ snum, sname, city, Country, percentage commission
+ ---------------------------------------
+ 10067 James London UK 40
+ --------------------------------------------- 
+
+SQL> insert into salespeople values (10067,'James','London UK',40);
+
+1 row created.
+
+Q3) Write a query where you will update the commission by $500 for all the sales man who live in Manchester. 
+SQL> update salespeople set comm=500 where city='Manchester';
+
+0 rows updated.
+
+Q4 a) add 1 salespeople commission as 0 
+SQL> insert into salespeople values (10068,'Bnd','London UK',0);
+
+1 row created.
+
+Q4 b) Remove all the people whose commission is 0
+SQL> delete from salespeople where comm=0;
+
+1 row deleted.
+
+Q5) write a query where you will display the number of salesman in each city.
+ hint : use aggregate functions and group by. 
+
+SQL> select city,count(city) from salespeople group by city;
+
+CITY                                    COUNT(CITY)
+--------------------------------------- -----------
+Muz                                               1
+Muzaffarpur                                       3
+piprahi                                           1
+London                                            1
+Sheohar                                           3
+Delhi                                             2
+Bengalure                                         1
+Gaya                                              3
+patna                                             1
+Raipur                                            3
+Chennai                                           1
+
+CITY                                    COUNT(CITY)
+--------------------------------------- -----------
+sitamarhi                                         1
+London UK                                         1
+
+13 rows selected.
+
+Q6) write a query where you will print all those people who live in london, manchester or newyork.
+SQL> select * from salespeople where city='London' OR city='manchester' OR city='New York';
+
+      SNUM SNAME           CITY                                          COMM
+---------- --------------- --------------------------------------- ----------
+        21 aditya          London                                       234.9
+Q7) write a query where you will print all those salespeople who do not live in london or newyork.
+SQL> select * from salespeople where city not in 'London' AND city not in 'New York';
+
+Q8) write a query where you will decrease the commison by 2% for all people living in mumbai. 
+SQL> update salespeople set comm=comm-((comm*2)/100);
+
+Q9) write a query where you will print the city having more than 2 salesman in same city and also print the total
+ salesman in those city. (use of group by is compulsory) 
+
+SQL> select city,count(city) from salespeople group by city having count(city)>2;
+
+CITY                                    COUNT(CITY)
+--------------------------------------- -----------
+Muzaffarpur                                       3
+Sheohar                                           3
+Gaya                                              3
+Raipur                                            3
+
+Q10) write a query where you will print all those salesman whose commission in null.
+SQL> select * from salespeople where comm is null;
+
+no rows selected
+ 
